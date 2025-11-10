@@ -93,3 +93,13 @@ fun Formulir(
                     modifier = Modifier.padding(20.dp),
                     verticalArrangement = Arrangement.spacedBy(14.dp)
                 ) {
+                    // Nama Kucing
+                    Text("NAMA KUCING", fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                    OutlinedTextField(
+                        value = namaKucing,
+                        onValueChange = { namaKucing = it },
+                        placeholder = { Text("Masukkan nama kucing") },
+                        singleLine = true,
+                        modifier = Modifier.fillMaxWidth()
+                    )
+
