@@ -154,3 +154,15 @@ fun Formulir(
                         }
                     }
 
+                    // Nama Pemilik
+                    Text("NAMA PEMILIK", fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                    OutlinedTextField(
+                        value = namaPemilik,
+                        onValueChange = { namaPemilik = it },
+                        placeholder = { Text("Masukkan nama pemilik") },
+                        singleLine = true,
+                        modifier = Modifier.fillMaxWidth()
+                    )
+
+                    Spacer(modifier = Modifier.height(24.dp))
+
