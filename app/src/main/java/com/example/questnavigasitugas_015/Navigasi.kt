@@ -26,3 +26,6 @@ enum class Navigasi {
 fun DataApp(
     navController: NavHostController = rememberNavController()
 ) {
+// Data global antar halaman
+    val dataList = remember { mutableStateListOf<List<String>>() }
+
