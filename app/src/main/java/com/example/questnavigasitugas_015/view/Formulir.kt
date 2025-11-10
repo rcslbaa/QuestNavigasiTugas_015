@@ -103,3 +103,20 @@ fun Formulir(
                         modifier = Modifier.fillMaxWidth()
                     )
 
+                    // Jenis Kelamin
+                    Text("JENIS KELAMIN", fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(10.dp)
+                    ) {
+                        jenisKelaminList.forEach { item ->
+                            Row(verticalAlignment = Alignment.CenterVertically) {
+                                RadioButton(
+                                    selected = jenisKelamin == item,
+                                    onClick = { jenisKelamin = item }
+                                )
+                                Text(item)
+                            }
+                        }
+                    }
+
