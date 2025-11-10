@@ -198,3 +198,37 @@ fun Formulir(
             }
         }
 
+        //Dialog sukses
+        if (showDialog) {
+            AlertDialog(
+                onDismissRequest = { showDialog = false },
+                containerColor = Color(0xFF80A4FF),
+                title = {
+                    Text(
+                        text = "Data Berhasil Dikirim",
+                        color = Color.White,
+                        fontWeight = FontWeight.Bold
+                    )
+                },
+                text = {
+                    Column {
+                        Text("Nama Kucing: $namaKucing", color = Color.White)
+                        Text("Jenis Kelamin: $jenisKelamin", color = Color.White)
+                        Text("Layanan: $jenisLayanan", color = Color.White)
+                        Text("Pemilik: $namaPemilik", color = Color.White)
+                    }
+                },
+                confirmButton = {
+                    Button(
+                        onClick = {
+                            showDialog = false
+                            OnSubmitBtnClick()
+                        },
+                        colors = ButtonDefaults.buttonColors(containerColor = Color.White)
+                    ) {
+                        Text("OK", color = Color(0xFF80A4FF))
+                    }
+                }
+            )
+        }
+
