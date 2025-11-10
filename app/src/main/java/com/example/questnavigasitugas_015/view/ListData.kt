@@ -76,3 +76,12 @@ fun ListData(
 
             Spacer(modifier = Modifier.height(16.dp))
 
+            if (dataList.isEmpty()) {
+                Text("Belum ada data.", color = Color.Gray)
+            } else {
+                LazyColumn(
+                    verticalArrangement = Arrangement.spacedBy(10.dp),
+                    modifier = Modifier.fillMaxSize(),
+                    contentPadding = PaddingValues(bottom = 16.dp)
+                ) {
+                    items(dataList) { data ->
