@@ -29,3 +29,10 @@ fun DataApp(
 // Data global antar halaman
     val dataList = remember { mutableStateListOf<List<String>>() }
 
+    Scaffold { innerPadding ->
+        NavHost(
+            navController = navController,
+            startDestination = Navigasi.Home.name,
+            modifier = Modifier.padding(innerPadding)
+        ) {
+
