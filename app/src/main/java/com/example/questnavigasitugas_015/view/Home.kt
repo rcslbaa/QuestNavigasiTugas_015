@@ -97,3 +97,26 @@ fun Home(
 
             Spacer(modifier = Modifier.weight(1f))
 
+            //Tombol Masuk
+            Button(
+                onClick = OnMasukBtnClick,
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color(0xFF80A4FF),
+                    contentColor = Color.White
+                ),
+                shape = RoundedCornerShape(30.dp),
+                modifier = Modifier
+                    .width(200.dp)
+                    .height(50.dp)
+            ) {
+                Text(
+                    text = "Masuk",
+                    fontSize = 18.sp,
+                    fontWeight = FontWeight.SemiBold
+                )
+            }
+
+            Spacer(modifier = Modifier.height(50.dp))
+        }
+    }
+}
