@@ -120,3 +120,37 @@ fun Formulir(
                         }
                     }
 
+                    // Jenis Layanan Grooming
+                    Text("JENIS LAYANAN GROOMING", fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                    ExposedDropdownMenuBox(
+                        expanded = expanded,
+                        onExpandedChange = { expanded = !expanded }
+                    ) {
+                        OutlinedTextField(
+                            value = jenisLayanan,
+                            onValueChange = {},
+                            readOnly = true,
+                            placeholder = { Text("Pilih layanan grooming") },
+                            trailingIcon = {
+                                ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded)
+                            },
+                            modifier = Modifier
+                                .menuAnchor()
+                                .fillMaxWidth()
+                        )
+                        ExposedDropdownMenu(
+                            expanded = expanded,
+                            onDismissRequest = { expanded = false }
+                        ) {
+                            layananList.forEach { layanan ->
+                                DropdownMenuItem(
+                                    text = { Text(layanan) },
+                                    onClick = {
+                                        jenisLayanan = layanan
+                                        expanded = false
+                                    }
+                                )
+                            }
+                        }
+                    }
+
