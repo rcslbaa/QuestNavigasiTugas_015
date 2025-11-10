@@ -47,3 +47,14 @@ fun Home(
 
             Spacer(modifier = Modifier.height(40.dp))
 
+            //Logo
+            Image(
+                painter = painterResource(id = R.drawable.logo), // pastikan logo ada di res/drawable
+                contentDescription = "Logo CatGroom",
+                modifier = Modifier
+                    .size(250.dp),
+                contentScale = ContentScale.Fit
+            )
+
+            Spacer(modifier = Modifier.height(24.dp))
+
