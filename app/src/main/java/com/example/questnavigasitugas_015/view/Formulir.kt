@@ -166,3 +166,35 @@ fun Formulir(
 
                     Spacer(modifier = Modifier.height(24.dp))
 
+                    // Tombol Aksi
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(12.dp)
+                    ) {
+                        OutlinedButton(
+                            onClick = OnBackBtnClick,
+                            modifier = Modifier.weight(1f)
+                        ) {
+                            Text("Kembali")
+                        }
+
+                        Button(
+                            onClick = {
+                                if (namaKucing.isBlank() || jenisKelamin.isBlank() || jenisLayanan.isBlank() || namaPemilik.isBlank()) {
+                                    showWarning = true
+                                } else {
+                                    // Simpan ke dataList
+                                    dataList.add(listOf(namaKucing, jenisKelamin, jenisLayanan, namaPemilik))
+                                    showDialog = true
+                                }
+                            },
+                            modifier = Modifier.weight(1f),
+                            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF80A4FF))
+                        ) {
+                            Text("Submit", color = Color.White)
+                        }
+                    }
+                }
+            }
+        }
+
