@@ -35,3 +35,15 @@ fun Home(
         ) {
             Spacer(modifier = Modifier.height(80.dp))
 
+            //Teks Selamat Datang
+            Text(
+                text = "SELAMAT DATANG",
+                fontSize = 24.sp,
+                fontWeight = FontWeight.Medium,
+                color = Color(0xFF3737A6),
+                fontFamily = FontFamily.Serif,
+                textAlign = TextAlign.Center
+            )
+
+            Spacer(modifier = Modifier.height(40.dp))
+
