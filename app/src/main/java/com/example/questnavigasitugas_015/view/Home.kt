@@ -58,3 +58,23 @@ fun Home(
 
             Spacer(modifier = Modifier.height(24.dp))
 
+            //Teks di bawah logo
+            Text(
+                text = "\uD83D\uDC3E CatGroom",
+                fontSize = 28.sp,
+                fontWeight = FontWeight.ExtraBold,
+                color = Color(0xFF3737A6),
+                fontFamily = FontFamily.Serif,
+                textAlign = TextAlign.Center
+            )
+
+            Text(
+                text = "SALON KUCINGMU",
+                fontSize = 16.sp,
+                fontWeight = FontWeight.SemiBold,
+                color = Color(0xFF3737A6),
+                textAlign = TextAlign.Center
+            )
+
+            Spacer(modifier = Modifier.height(145.dp))
+
