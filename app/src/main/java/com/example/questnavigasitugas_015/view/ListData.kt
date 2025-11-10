@@ -120,3 +120,35 @@ fun ListData(
                                     }
                                 }
 
+                                Row(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    horizontalArrangement = Arrangement.SpaceBetween
+                                ) {
+                                    Column {
+                                        Text(
+                                            "JENIS LAYANAN",
+                                            fontWeight = FontWeight.Bold,
+                                            color = Color(0xFF3737A6),
+                                            fontSize = 12.sp
+                                        )
+                                        Text(data[2], fontSize = 14.sp, color = Color.Black)
+                                    }
+
+                                    Column(horizontalAlignment = Alignment.End) {
+                                        Text(
+                                            "NAMA PEMILIK",
+                                            fontWeight = FontWeight.Bold,
+                                            color = Color(0xFF3737A6),
+                                            fontSize = 12.sp
+                                        )
+                                        Text(data[3], fontSize = 14.sp, color = Color.Black)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
