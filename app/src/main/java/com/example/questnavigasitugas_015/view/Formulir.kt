@@ -61,3 +61,24 @@ fun Formulir(
     var showDialog by remember { mutableStateOf(false) }
     var showWarning by remember { mutableStateOf(false) }
 
+    //Tampilan utama
+    Scaffold(
+        modifier = Modifier.fillMaxSize(),
+        containerColor = Color(0xFFDBEBFF)
+    ) { innerPadding ->
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(innerPadding)
+                .padding(horizontal = 24.dp, vertical = 32.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Text(
+                text = "Formulir Pendaftaran Grooming",
+                fontSize = 22.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color(0xFF1A237E)
+            )
+
+            Spacer(modifier = Modifier.height(24.dp))
+
