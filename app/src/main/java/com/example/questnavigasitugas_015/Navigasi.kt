@@ -44,3 +44,15 @@ fun DataApp(
                 )
             }
 
+            composable(route = Navigasi.Detail.name) {
+                ListData(
+                    dataList = dataList,
+                    OnFormulirClick = {
+                        navController.navigate(Navigasi.Formulir.name)
+                    },
+                    OnBerandaClick = {
+                        cancelAndBackToHome(navController)
+                    }
+                )
+            }
+
