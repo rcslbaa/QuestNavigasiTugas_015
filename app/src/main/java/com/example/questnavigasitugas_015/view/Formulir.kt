@@ -42,3 +42,22 @@ fun Formulir(
     OnSubmitBtnClick: () -> Unit,
     OnBackBtnClick: () -> Unit = {}
 ) {
+// ===== Variabel input =====
+    var namaKucing by remember { mutableStateOf("") }
+    var jenisKelamin by remember { mutableStateOf("") }
+    var jenisLayanan by remember { mutableStateOf("") }
+    var namaPemilik by remember { mutableStateOf("") }
+
+    val jenisKelaminList = listOf("Jantan", "Betina")
+    val layananList = listOf(
+        "Grooming Biasa",
+        "Grooming Premium",
+        "Mandi Anti Kutu",
+        "Cukur Bulu",
+        "Potong Kuku"
+    )
+
+    var expanded by remember { mutableStateOf(false) }
+    var showDialog by remember { mutableStateOf(false) }
+    var showWarning by remember { mutableStateOf(false) }
+
