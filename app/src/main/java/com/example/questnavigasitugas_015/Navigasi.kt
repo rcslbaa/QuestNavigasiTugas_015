@@ -56,3 +56,18 @@ fun DataApp(
                 )
             }
 
+            composable(route = Navigasi.Formulir.name) {
+                Formulir(
+                    dataList = dataList,
+                    OnBackBtnClick = {
+                        navController.popBackStack(Navigasi.Detail.name, false)
+                    },
+                    OnSubmitBtnClick = {
+                        navController.popBackStack(Navigasi.Detail.name, false)
+                    }
+                )
+            }
+        }
+    }
+}
+
