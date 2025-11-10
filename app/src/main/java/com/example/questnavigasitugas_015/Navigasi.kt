@@ -36,3 +36,11 @@ fun DataApp(
             modifier = Modifier.padding(innerPadding)
         ) {
 
+            composable(route = Navigasi.Home.name) {
+                Home(
+                    OnMasukBtnClick = {
+                        navController.navigate(Navigasi.Detail.name)
+                    }
+                )
+            }
+
