@@ -85,3 +85,38 @@ fun ListData(
                     contentPadding = PaddingValues(bottom = 16.dp)
                 ) {
                     items(dataList) { data ->
+                        Card(
+                            modifier = Modifier.fillMaxWidth(),
+                            colors = CardDefaults.cardColors(containerColor = Color.White),
+                            shape = RoundedCornerShape(12.dp),
+                            elevation = CardDefaults.cardElevation(defaultElevation = 3.dp)
+                        ) {
+                            Column(
+                                modifier = Modifier.padding(16.dp),
+                                verticalArrangement = Arrangement.spacedBy(8.dp)
+                            ) {
+                                Row(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    horizontalArrangement = Arrangement.SpaceBetween
+                                ) {
+                                    Column {
+                                        Text(
+                                            "NAMA KUCING",
+                                            fontWeight = FontWeight.Bold,
+                                            color = Color(0xFF3737A6),
+                                            fontSize = 12.sp
+                                        )
+                                        Text(data[0], fontSize = 14.sp, color = Color.Black)
+                                    }
+
+                                    Column(horizontalAlignment = Alignment.End) {
+                                        Text(
+                                            "JENIS KELAMIN",
+                                            fontWeight = FontWeight.Bold,
+                                            color = Color(0xFF3737A6),
+                                            fontSize = 12.sp
+                                        )
+                                        Text(data[1], fontSize = 14.sp, color = Color.Black)
+                                    }
+                                }
+
