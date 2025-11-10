@@ -78,3 +78,22 @@ fun Home(
 
             Spacer(modifier = Modifier.height(145.dp))
 
+            //Nama dan NIM
+            Text(
+                text = "Ifa Asmarani Rosalba",
+                fontSize = 16.sp,
+                fontWeight = FontWeight.Medium,
+                color = Color(0xFF3737A6),
+                textAlign = TextAlign.Center
+            )
+
+            Text(
+                text = "20230140015",
+                fontSize = 15.sp,
+                fontWeight = FontWeight.Normal,
+                color = Color(0xFF3737A6),
+                textAlign = TextAlign.Center
+            )
+
+            Spacer(modifier = Modifier.weight(1f))
+
